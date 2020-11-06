@@ -1,4 +1,17 @@
-% PRE-PROCESS REACTION TIMES DATA FROM A MAT FILE
+% MATLAB VERSION 2019a
+% LOAD AND PRE-PROCESS REACTION-TIMES DATA FROM A MAT FILE
+
+
+% 48 stimuli (24 animate and 24 inanimate) 
+% categories:
+% human faces
+% human bodies
+% animal faces 
+% animal bodies 
+% manmade objects 
+% houses
+% food
+% natural scenes
 
 % a few paths and variables
 startpath   = pwd; % home dir
