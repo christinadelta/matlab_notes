@@ -33,25 +33,192 @@
 .variableNameElement {margin-bottom: 3px; display: inline-block;}
 .matrixElement .horizontalEllipsis,.rtcDataTipElement .matrixElement .horizontalEllipsis {display: inline-block; margin-top: 3px; width: 30px; height: 12px; background-repeat: no-repeat; background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAJCAYAAADO1CeCAAAAJUlEQVR42mP4//8/A70xw0i29BUDFPxnAEtTW37wWDqakIa4pQDvOOG89lHX2gAAAABJRU5ErkJggg==");}
 .matrixElement .verticalEllipsis,.textElement .verticalEllipsis,.rtcDataTipElement .matrixElement .verticalEllipsis,.rtcDataTipElement .textElement .verticalEllipsis {margin-left: 35px; width: 12px; height: 30px; background-repeat: no-repeat; background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAZCAYAAAAIcL+IAAAALklEQVR42mP4//8/AzGYgWyFMECMwv8QddRS+P//KyimlmcGUOFoOI6GI/UVAgDnd8Dd4+NCwgAAAABJRU5ErkJggg==");}
-.S8 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 4px; padding: 6px 45px 4px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }</style></head><body><div class = rtcContent><div  class = 'S0'><span>I recently found some old notes (from my Master's time), that had really helped me back then to get started with </span><span style=' font-weight: bold;'>Matlab </span><span>and the </span><span style=' font-weight: bold;'>Psychtoolbox (PTB)</span><span>, so I thought to share them.</span></div><div  class = 'S0'><span>I will create 5 to 6 notebooks (or matlab live scripts) that will include notes about:</span></div><ul  class = 'S1'><li  class = 'S2'><span>Some basic matlab introductory information</span></li><li  class = 'S2'><span>Introduction on PTB, Screens and Windows</span></li><li  class = 'S2'><span>Introduction on timing </span></li><li  class = 'S2'><span>Images in PTB</span></li><li  class = 'S2'><span>Animation in PTB</span></li></ul><div  class = 'S0'><span>This is the 1st of the 5 notebooks. Please note that I will be updating them at times.</span></div><div  class = 'S0'><span>% -------------------------------------------------------------------------------------------------- %</span></div><h2  class = 'S3'><span>NOTEBOOK 1</span></h2><h4  class = 'S4'><span>MATLAB AND PSYCHOPHYSICS TOOLBOX (PTB) PART 1:</span></h4><h4  class = 'S4'><span>SOME BASIC MATLAB COMMANDS:</span></h4><div  class = 'S0'><span></span></div><div  class = 'S0'><span style=' font-weight: bold;'>Variables in Matlab</span><span>. A variable is sort of like a box. It has a certain shape and a certain dimension with a label naming it. In this box you can put the (virtual) item(s) you need ( e.g. a number, a name, an image). And variables come of ifferent types:</span></div><div  class = 'S0'><span>a. Scalar:</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">a</span><span> = 1</span></span></div><div  class = 'S6'><div class='variableElement' style='font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px; '>a = 1</div></div></div></div><div  class = 'S7'><span>b. Row vector:</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">a</span><span> = [1 2 3 4 5 6]</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="D7B282D8" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="855" data-testid="output_1" style="width: 885px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 855px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">a = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">1×6</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:44,&quot;totalColumns&quot;:6,&quot;totalRows&quot;:1,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 266px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">     1     2     3     4     5     6
-</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div></div><div  class = 'S7'><span>or</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span>a = [1, 2, 3, 4, 5, 6]</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="8CCBD9AB" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="855" data-testid="output_2" style="width: 885px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 855px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">a = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">1×6</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:44,&quot;totalColumns&quot;:6,&quot;totalRows&quot;:1,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 266px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">     1     2     3     4     5     6
-</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div></div><div  class = 'S7'><span>c. Column vector:</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">b</span><span> = [1; 2; 3; 4; 5; 6]</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="1C3EDE18" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="855" data-testid="output_3" style="width: 885px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 855px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">b = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">6×1</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:44,&quot;totalColumns&quot;:1,&quot;totalRows&quot;:6,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 46px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">     1
+.embeddedOutputsErrorElement {min-height: 18px; max-height: 250px; overflow: auto;}
+.embeddedOutputsErrorElement.inlineElement {}
+.embeddedOutputsErrorElement.rightPaneElement {}
+.embeddedOutputsWarningElement{min-height: 18px; max-height: 250px; overflow: auto;}
+.embeddedOutputsWarningElement.inlineElement {}
+.embeddedOutputsWarningElement.rightPaneElement {}
+.diagnosticMessage-wrapper {font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px;}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType {color: rgb(255,100,0);}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType a {color: rgb(255,100,0); text-decoration: underline;}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType {color: rgb(230,0,0);}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType a {color: rgb(230,0,0); text-decoration: underline;}
+.diagnosticMessage-wrapper .diagnosticMessage-messagePart,.diagnosticMessage-wrapper .diagnosticMessage-causePart {white-space: pre-wrap;}
+.diagnosticMessage-wrapper .diagnosticMessage-stackPart {white-space: pre;}
+.embeddedOutputsTextElement,.embeddedOutputsVariableStringElement {white-space: pre; word-wrap: initial; min-height: 18px; max-height: 250px; overflow: auto;}
+.textElement,.rtcDataTipElement .textElement {padding-top: 3px;}
+.embeddedOutputsTextElement.inlineElement,.embeddedOutputsVariableStringElement.inlineElement {}
+.inlineElement .textElement {}
+.embeddedOutputsTextElement.rightPaneElement,.embeddedOutputsVariableStringElement.rightPaneElement {min-height: 16px;}
+.rightPaneElement .textElement {padding-top: 2px; padding-left: 9px;}
+.S8 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px; padding: 6px 45px 4px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S9 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 4px; padding: 6px 45px 4px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S10 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 0px none rgb(0, 0, 0); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S11 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 0px none rgb(0, 0, 0); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S12 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px; padding: 0px 45px 4px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S13 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px 0px 4px 4px; padding: 6px 45px 4px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S14 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px 0px 4px 4px; padding: 0px 45px 4px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }</style></head><body><div class = rtcContent><div  class = 'S0'><span>I recently found some old notes (from my Master's time), that had really helped me back then to get started with </span><span style=' font-weight: bold;'>Matlab </span><span>and the </span><span style=' font-weight: bold;'>Psychtoolbox (PTB)</span><span>, so I thought to share them.</span></div><div  class = 'S0'><span>I will create 5 to 6 notebooks (or matlab live scripts) that will include notes about:</span></div><ul  class = 'S1'><li  class = 'S2'><span>Some basic matlab introductory information</span></li><li  class = 'S2'><span>Introduction on PTB, Screens and Windows</span></li><li  class = 'S2'><span>Introduction on timing </span></li><li  class = 'S2'><span>Images in PTB</span></li><li  class = 'S2'><span>Animation in PTB</span></li></ul><div  class = 'S0'><span>This is the 1st of the 5 notebooks. I will first provide a few matlab notes that I think are important before diving into the powerfull </span><span style=' font-weight: bold;'>psychtoolbox.</span></div><div  class = 'S0'><span>Please note that I will be updating them at times.</span></div><div  class = 'S0'><span>% -------------------------------------------------------------------------------------------------- %</span></div><h2  class = 'S3'><span>NOTEBOOK 1</span></h2><h4  class = 'S4'><span>MATLAB AND PSYCHOPHYSICS TOOLBOX (PTB) PART 1:</span></h4><h4  class = 'S4'><span>SOME BASIC MATLAB COMMANDS:</span></h4><div  class = 'S0'><span></span></div><div  class = 'S0'><span style=' font-weight: bold;'>Variables in Matlab</span><span>. A variable is sort of like a box. It has a certain shape and a certain dimension with a label naming it. In this box you can put the (virtual) item(s) you need ( e.g. a number, a name, an image). And variables come of ifferent types:</span></div><div  class = 'S0'><span>a. Scalar:</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">a</span><span> = 1</span></span></div><div  class = 'S6'><div class='variableElement' style='font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px; '>a = 1</div></div></div></div><div  class = 'S7'><span>b. Row vector:</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">a</span><span> = [1 2 3 4 5 6]</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="C2704E45" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="847" data-testid="output_1" style="width: 877px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 847px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">a = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">1×6</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:44,&quot;totalColumns&quot;:6,&quot;totalRows&quot;:1,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 266px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">     1     2     3     4     5     6
+</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div></div><div  class = 'S7'><span>or</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span>a = [1, 2, 3, 4, 5, 6]</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="46ABAEAA" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="847" data-testid="output_2" style="width: 877px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 847px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">a = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">1×6</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:44,&quot;totalColumns&quot;:6,&quot;totalRows&quot;:1,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 266px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">     1     2     3     4     5     6
+</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div></div><div  class = 'S7'><span>c. Column vector:</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">b</span><span> = [1; 2; 3; 4; 5; 6]</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="1D88A167" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="847" data-testid="output_3" style="width: 877px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 847px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">b = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">6×1</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:44,&quot;totalColumns&quot;:1,&quot;totalRows&quot;:6,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 46px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">     1
      2
      3
      4
      5
      6
-</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div></div><div  class = 'S7'><span>But there is an easier way to get a column vector (especially when we want to do something like the above):</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span>b = a'</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="CEBA5C98" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="855" data-testid="output_4" style="width: 885px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 855px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">b = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">6×1</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:44,&quot;totalColumns&quot;:1,&quot;totalRows&quot;:6,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 46px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">     1
+</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div></div><div  class = 'S7'><span>But there is an easier way to get a column vector (especially when we want to do something like the above):</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">b</span><span> = a'</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="C9A429E8" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="847" data-testid="output_4" style="width: 877px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 847px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">b = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">6×1</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:44,&quot;totalColumns&quot;:1,&quot;totalRows&quot;:6,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 46px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">     1
      2
      3
      4
      5
      6
-</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div></div><div  class = 'S7'><span>Using the symbol: </span><span style=' font-weight: bold;'>'</span><span>,</span><span style=' font-weight: bold;'> </span><span>we can easily transpose a  vector or a matrix in matlab.</span></div><div  class = 'S0'><span>d. Matrix:</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span>a = [1 2 3 4; 5 6 7 8; 9 10 11 12]</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="8034BDC8" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="855" data-testid="output_5" style="width: 885px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 855px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">a = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">3×4</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:44,&quot;totalColumns&quot;:4,&quot;totalRows&quot;:3,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 178px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">     1     2     3     4
+</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div></div><div  class = 'S7'><span>Using the symbol: </span><span style=' font-weight: bold;'>'</span><span>,</span><span style=' font-weight: bold;'> </span><span>we can easily transpose a  vector or a matrix in matlab.</span></div><div  class = 'S0'><span>d. Matrix:</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span>a = [1 2 3 4; 5 6 7 8; 9 10 11 12]</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="A3ADE71F" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="847" data-testid="output_5" style="width: 877px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 847px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">a = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">3×4</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:44,&quot;totalColumns&quot;:4,&quot;totalRows&quot;:3,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 178px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">     1     2     3     4
      5     6     7     8
      9    10    11    12
-</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div></div><div  class = 'S7'><span style=' font-weight: bold;'>NOTE: </span><span>Scalars and vectors are just special cases of matricies. </span></div><div  class = 'S0'><span>% ---------------------------------</span></div><div  class = 'S0'><span style=' font-weight: bold;'>The size function.</span><span> With the size function we can determine the size of a variable.</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span>size(a)</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="0151458E" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="855" data-testid="output_6" style="width: 885px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 855px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">ans = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">1×2</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:44,&quot;totalColumns&quot;:2,&quot;totalRows&quot;:1,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 90px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">     3     4
-</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div></div><div  class = 'S7'><span>For more information about this function (and about any other function that I will mention), type 'help' and the function name on the command window:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>help </span><span style="color: rgb(160, 32, 240);">size</span></span></div></div></div><div  class = 'S7'><span></span></div><div  class = 'S0'><span></span></div><div  class = 'S0'><span></span></div><div  class = 'S0'><span></span></div><div  class = 'S0'><span></span></div><div  class = 'S0'></div></div>
+</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div></div><div  class = 'S7'><span style=' font-weight: bold;'>NOTE: </span><span>Scalars and vectors are just special cases of matricies. </span></div><div  class = 'S0'><span>% ---------------------------------</span></div><div  class = 'S0'><span style=' font-weight: bold;'>The size function.</span><span> With the size function we can determine the size of a variable.</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span>size(a)</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="6714B229" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="847" data-testid="output_6" style="width: 877px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 847px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">ans = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">1×2</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:44,&quot;totalColumns&quot;:2,&quot;totalRows&quot;:1,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 90px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">     3     4
+</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div></div><div  class = 'S7'><span>For more information about this function (and about any other function that I will mention), type 'help' and the function name on the command window:</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span>help </span><span style="color: rgb(160, 32, 240);">size</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement scrollableOutput" uid="631D5C18" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="847" data-height="675" data-hashorizontaloverflow="false" data-testid="output_7" style="max-height: 261px; width: 877px;"><div class="textElement"> <strong>size</strong>   Size of array.  
+    D = <strong>size</strong>(X), for M-by-N matrix X, returns the two-element row vector
+    D = [M,N] containing the number of rows and columns in the matrix.
+    For N-D arrays, <strong>size</strong>(X) returns a 1-by-N vector of dimension lengths.
+    Trailing singleton dimensions are ignored.
+ 
+    [M,N] = <strong>size</strong>(X) for matrix X, returns the number of rows and columns in
+    X as separate output variables. 
+    
+    [M1,M2,M3,...,MN] = <strong>size</strong>(X) for N&gt;1 returns the sizes of the first N 
+    dimensions of the array X.  If the number of output arguments N does
+    not equal NDIMS(X), then for:
+ 
+    N &gt; NDIMS(X), <strong>size</strong> returns ones in the "extra" variables, i.e., outputs
+                  NDIMS(X)+1 through N.
+    N &lt; NDIMS(X), MN contains the product of the sizes of dimensions N
+                  through NDIMS(X).
+ 
+    M = <strong>size</strong>(X,DIM) returns the lengths of the specified dimensions in a 
+    row vector. DIM can be a scalar or vector of dimensions. For example, 
+    <strong>size</strong>(X,1) returns the number of rows of X and <strong>size</strong>(X,[1 2]) returns a 
+    row vector containing the number of rows and columns.
+ 
+    M = <strong>size</strong>(X,DIM1,DIM2,...,DIMN) returns the lengths of the dimensions
+    DIM1,...,DIMN as a row vector.
+ 
+    [M1,M2,...,MN] = <strong>size</strong>(X,DIM) OR [M1,M2,...,MN] = <strong>size</strong>(X,DIM1,...,DIMN)
+    returns the lengths of the specified dimensions as separate outputs.
+    The number of outputs must equal the number of dimensions provided.
+ 
+    When <strong>size</strong> is applied to a Java array, the number of rows
+    returned is the length of the Java array and the number of columns
+    is always 1.  When <strong>size</strong> is applied to a Java array of arrays, the
+    result describes only the top level array in the array of arrays.
+ 
+    Example:
+    If
+       X = rand(2,3,4);
+    then
+       d = size(X)              returns  d = [2 3 4]
+       [m1,m2,m3,m4] = size(X)  returns  m1 = 2, m2 = 3, m3 = 4, m4 = 1
+       [m,n] = size(X)          returns  m = 2, n = 12
+       m2 = size(X,2)           returns  m2 = 3
+ 
+    See also length, ndims, numel.
+
+    Documentation for size
+    Other functions named size</div></div></div></div></div><div  class = 'S7'><span>Try this:</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span>[nrows, ncols] = size(a)</span></span></div><div  class = 'S6'><div class='variableElement' style='font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px; '>nrows = 3</div><div class='variableElement' style='font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px; '>ncols = 4</div></div></div></div><div  class = 'S7'><span>It will output the number of rows (nrows) and the number of columns (ncols).</span></div><div  class = 'S0'><span>Back to variables. Variables can also have three or more dimensions. We saw that a scalar is a 1x1 matrix. Other functions that are size related are: </span><span style=' font-family: monospace;'>ndims</span><span> and </span><span style=' font-family: monospace;'>length</span><span> functions. </span></div><div  class = 'S0'><span>Initialize a variable using the </span><span style=' font-family: monospace;'>ones </span><span>or </span><span style=' font-family: monospace;'>zeros </span><span>function and ask for its length and ndims:</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span>a = zeros(3,4)</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="126EBC91" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="847" data-testid="output_10" style="width: 877px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 847px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">a = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">3×4</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:44,&quot;totalColumns&quot;:4,&quot;totalRows&quot;:3,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 178px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div><div class="inlineWrapper outputs"><div  class = 'S8'><span style="white-space: pre;"><span>length(a)</span></span></div><div  class = 'S6'><div class='variableElement' style='font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px; '>ans = 4</div></div></div><div class="inlineWrapper outputs"><div  class = 'S8'><span style="white-space: pre;"><span>ndims(a)</span></span></div><div  class = 'S6'><div class='variableElement' style='font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px; '>ans = 2</div></div></div></div><div  class = 'S7'><span style=' font-weight: bold;'>Special characters and operations.</span><span> for more info type:</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span>help </span><span style="color: rgb(160, 32, 240);">ops </span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement scrollableOutput" uid="B24D25FB" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="847" data-height="1151" data-hashorizontaloverflow="false" data-testid="output_13" style="max-height: 261px; width: 877px;"><div class="textElement">  Operators and special characters.
+ 
+  Arithmetic operators.
+    plus       - Plus                               +    
+    uplus      - Unary plus                         +    
+    minus      - Minus                              -    
+    uminus     - Unary minus                        -    
+    mtimes     - Matrix multiply                    *    
+    times      - Array multiply                    .*    
+    mpower     - Matrix power                       ^    
+    power      - Array power                       .^    
+    mldivide   - Backslash or left matrix divide    \    
+    mrdivide   - Slash or right matrix divide       /    
+    ldivide    - Left array divide                 .\    
+    rdivide    - Right array divide                ./    
+    idivide    - Integer division with rounding option.
+    kron       - Kronecker tensor product   
+ 
+  Relational operators.
+    eq         - Equal                             ==     
+    ne         - Not equal                         ~=     
+    lt         - Less than                          &lt;      
+    gt         - Greater than                       &gt;      
+    le         - Less than or equal                &lt;=     
+    ge         - Greater than or equal             &gt;=     
+ 
+  Logical operators.
+    relop      - Short-circuit logical AND         &amp;&amp;     
+    relop      - Short-circuit logical OR          ||     
+    and        - Element-wise logical AND           &amp;      
+    or         - Element-wise logical OR            |      
+    not        - Logical NOT                        ~      
+    punct      - Ignore function argument or output ~
+    xor        - Logical EXCLUSIVE OR
+    any        - True if any element of vector is nonzero
+    all        - True if all elements of vector are nonzero
+ 
+  Special characters. 
+    colon      - Colon                              : 
+    paren      - Parentheses and subscripting      ( )              
+    paren      - Brackets                          [ ]     
+    paren      - Braces and subscripting           { }          
+    punct      - Function handle creation           @
+    punct      - Decimal point                      .      
+    punct      - Structure field access             .      
+    punct      - Parent directory                   ..     
+    punct      - Continuation                       ...    
+    punct      - Separator                          ,      
+    punct      - Semicolon                          ;      
+    punct      - Comment                            %      
+    punct      - Invoke operating system command    !            
+    punct      - Assignment                         =
+    punct      - Quote                              '      
+    punct      - Double quote                       "    
+    transpose  - Transpose                         .'
+    ctranspose - Complex conjugate transpose        ' 
+    horzcat    - Horizontal concatenation          [,]     
+    vertcat    - Vertical concatenation            [;]     
+    subsasgn   - Subscripted assignment          ( ),{ },.   
+    subsref    - Subscripted reference           ( ),{ },.   
+    numArgumentsFromSubscript - Number of arguments for indexing methods
+    subsindex  - Subscript index
+    metaclass  - Metaclass for MATLAB class         ?
+ 
+  Bitwise operators.
+    bitand     - Bit-wise AND.
+    bitcmp     - Complement bits.
+    bitor      - Bit-wise OR.
+    bitxor     - Bit-wise XOR.
+    bitset     - Set bit.
+    bitget     - Get bit.
+    bitshift   - Bit-wise shift.
+ 
+  Set operators.
+    union      - Set union.
+    unique     - Set unique.
+    intersect  - Set intersection.
+    setdiff    - Set difference.
+    setxor     - Set exclusive-or.
+    ismember   - True for set member.
+ 
+  See also function_handle.</div></div></div></div></div><div  class = 'S7'><span>When programming it is strongly recommended to use comments. In case you don't know this yet, in matlab we add comments using the percent (%)  sign:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(60, 118, 61);">% this is a comment</span></span></div></div></div><div  class = 'S7'><span>Comments are extremely useful for us and for others. Try writing a block of code without comments, and don't look at it for a few months. I bet you that a few months later, when you see your own code, you will probably be thinking "what was I trying to do here?"</span></div><div  class = 'S0'><span>Now let's try some addition.</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span style="color: rgb(60, 118, 61);">% create 2 variable/matricies and add them in a third </span></span></div></div><div class="inlineWrapper"><div  class = 'S11'><span style="white-space: pre;"><span style="color: rgb(60, 118, 61);">% variable/matrix</span></span></div></div><div class="inlineWrapper outputs"><div  class = 'S12'><span style="white-space: pre;"><span>a = [1 2]</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="819AC7AF" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="847" data-testid="output_14" style="width: 877px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 847px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">a = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">1×2</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:44,&quot;totalColumns&quot;:2,&quot;totalRows&quot;:1,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 90px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">     1     2
+</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div><div class="inlineWrapper outputs"><div  class = 'S8'><span style="white-space: pre;"><span>b = [3 4]</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="01A6C2DA" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="847" data-testid="output_15" style="width: 877px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 847px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">b = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">1×2</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:44,&quot;totalColumns&quot;:2,&quot;totalRows&quot;:1,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 90px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">     3     4
+</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div><div class="inlineWrapper outputs"><div  class = 'S8'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">c</span><span> = a + b</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="DFAAB1A4" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="847" data-testid="output_16" style="width: 877px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 847px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">c = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">1×2</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:44,&quot;totalColumns&quot;:2,&quot;totalRows&quot;:1,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 90px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">     4     6
+</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div></div><div  class = 'S7'><span>As you can see we added the rows with the rows and the columns with the columns. The same logic appllies for subtraction but not for multiplication or division (I will probably make a seperate notebook on matrix operartions). For now, keep in mind that when adding 2 matricies, we add the rows with the rows and the columns with the columns. </span></div><div  class = 'S0'><span style=' font-weight: bold; font-style: italic;'></span></div><div  class = 'S0'><span style=' font-weight: bold; font-style: italic;'>Also, keep in mind that it's good to use semicolon (;) at the end of your commands. For example</span><span>:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">c</span><span> = a + b; </span></span></div></div></div><div  class = 'S7'><span>This prevents matlab from printing the output. Even though now, it may not seem necessary, it can be really annoying in the future when running long scripts with for and while loops, etc.. besides (especially when working in loops), not using semicolons results in your code running slowly. </span></div><div  class = 'S0'><span style=' font-weight: bold;'>The colon (:). </span><span>This is used as "to" or "step":</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span>b = 1:5 </span><span style="color: rgb(60, 118, 61);">% create a 1 to 5 vector</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="5C5DF9C3" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="847" data-testid="output_17" style="width: 877px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 847px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">b = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">1×5</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:44,&quot;totalColumns&quot;:5,&quot;totalRows&quot;:1,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 222px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">     1     2     3     4     5
+</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div><div class="inlineWrapper outputs"><div  class = 'S8'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">c</span><span> = 1:.5:4 </span><span style="color: rgb(60, 118, 61);">% create a 1 to 4 vector and increment by 0.5 each time</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="F148A373" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="847" data-testid="output_18" style="width: 877px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 847px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">c = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">1×7</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:73,&quot;totalColumns&quot;:7,&quot;totalRows&quot;:1,&quot;charsPerColumn&quot;:10}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 513px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">    1.0000    1.5000    2.0000    2.5000    3.0000    3.5000    4.0000
+</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div></div><div  class = 'S7'><span style=' font-weight: bold;'></span></div><div  class = 'S0'><span style=' font-weight: bold;'>Indexing (subscripts). </span><span>We use parentheses to indicate subscripts. Subscritps need to be positive integers, in matricies of any size:</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span>b(2) </span><span style="color: rgb(60, 118, 61);">% which is the 2nd elemt of b?</span></span></div><div  class = 'S6'><div class='variableElement' style='font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px; '>ans = 2</div></div></div><div class="inlineWrapper outputs"><div  class = 'S8'><span style="white-space: pre;"><span>b(1:3) </span><span style="color: rgb(60, 118, 61);">% which are the first 3 elements of b?</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="BBC034A4" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="847" data-testid="output_20" style="width: 877px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 847px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">ans = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">1×3</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:44,&quot;totalColumns&quot;:3,&quot;totalRows&quot;:1,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 134px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">     1     2     3
+</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div></div><div  class = 'S7'><span>The second command </span><span style=' font-family: monospace;'>b(1:3) </span><span>is the same as:</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span>b([1 2 3])</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="9857FA13" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="847" data-testid="output_21" style="width: 877px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 847px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">ans = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">1×3</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:44,&quot;totalColumns&quot;:3,&quot;totalRows&quot;:1,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 134px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">     1     2     3
+</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div></div><div  class = 'S7'><span>Variable/matrix b is of size 1x5. Lets try indexing with matricies of different size:</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span>a = [1 3 5 6; 4 6 3 2; 5 8 9 5] </span><span style="color: rgb(60, 118, 61);">% this is a 3x4 matrix</span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="8AD3AA6A" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="847" data-testid="output_22" style="width: 877px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 847px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">a = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">3×4</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:44,&quot;totalColumns&quot;:4,&quot;totalRows&quot;:3,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 178px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">     1     3     5     6
+     4     6     3     2
+     5     8     9     5
+</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div></div><div  class = 'S7'><span>Exactract the entire 2nd row:</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span>a(2,:) </span><span style="color: rgb(60, 118, 61);">% the colon is used as: everything </span></span></div><div  class = 'S6'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="0EE214BB" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="847" data-testid="output_23" style="width: 877px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 847px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">ans = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">1×4</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:44,&quot;totalColumns&quot;:4,&quot;totalRows&quot;:1,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 178px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">     4     6     3     2
+</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div><div class="inlineWrapper"><div  class = 'S13'><span style="white-space: pre;"><span style="color: rgb(60, 118, 61);">% (so, 2nd row and all columns)</span></span></div></div></div><div  class = 'S7'><span>Now, extract the element in row 3, column 4:</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S5'><span style="white-space: pre;"><span>a(3,4) </span><span style="color: rgb(60, 118, 61);">% the output is 5</span></span></div><div  class = 'S6'><div class='variableElement' style='font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px; '>ans = 5</div></div></div></div><div  class = 'S7'><span>try this:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span>a([1 3], :) </span><span style="color: rgb(60, 118, 61);">% we explicitely ask for rows 1 and 3 and all columns</span></span></div></div><div class="inlineWrapper"><div  class = 'S14'><span style="white-space: pre;"><span>a([1 2], [2 4]) </span><span style="color: rgb(60, 118, 61);">% extract rows 1 and 2 and columns 2 and 4</span></span></div></div></div><div  class = 'S7'><span>what if we want to change the value of a specific element/item in a matrix? Let's say we want to change the value of the item in row 3, column 3 (the value now is 9) to 0:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">a</span><span>(3,3)= 0 </span><span style="color: rgb(60, 118, 61);">% now 9 has changed to 0</span></span></div></div></div><div  class = 'S7'><span></span></div><div  class = 'S0'><span style=' font-weight: bold;'>Some basic math stuff.</span><span> For more info type:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>help </span><span style="color: rgb(160, 32, 240);">arith</span></span></div></div></div><div  class = 'S7'><span>The operations are: </span><span style=' font-family: monospace;'>+ - * / ^ .* ./ .^</span></div><div  class = 'S0'><span>Scalar math. Simple operations of scalars:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>2*3 </span></span></div></div></div><div  class = 'S7'><span>or...</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span>a = 2</span></span></div></div><div class="inlineWrapper"><div  class = 'S11'><span style="white-space: pre;"><span>b = 3</span></span></div></div><div class="inlineWrapper"><div  class = 'S14'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">c</span><span> = a*b</span></span></div></div></div><div  class = 'S7'><span>The above two codes are exactly the same.</span></div><div  class = 'S0'><span>Now try some more operations:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span>4 ^ 1.5</span></span></div></div><div class="inlineWrapper"><div  class = 'S11'><span style="white-space: pre;"><span>2 * 3 + 2</span></span></div></div><div class="inlineWrapper"><div  class = 'S14'><span style="white-space: pre;"><span>2 * (3 + 1)</span></span></div></div></div><div  class = 'S7'><span>NOTE: you can try the above operations in variables:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span>a = 4</span></span></div></div><div class="inlineWrapper"><div  class = 'S11'><span style="white-space: pre;"><span>b = 1.5</span></span></div></div><div class="inlineWrapper"><div  class = 'S14'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">c</span><span> = a ^ b</span></span></div></div></div><div  class = 'S7'><span>.. and so on.</span></div><div  class = 'S0'><span style=' font-weight: bold;'>Basic Vector and Scalar math. </span></div><div  class = 'S0'><span>Create a 1x3 vector:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span>a = [2 4 6]</span></span></div></div><div class="inlineWrapper"><div  class = 'S14'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">b</span><span> = 2*a</span></span></div></div></div><div  class = 'S7'><span style=' font-weight: bold;'>b</span><span> multiplies every element of vector </span><span style=' font-weight: bold;'>a</span><span> by 2. Thus</span><span style=' font-family: monospace;'> b = [4 8 12]</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">c</span><span> = a + 5 </span></span></div></div></div><div  class = 'S7'><span style=' font-weight: bold;'>c</span><span> adds 5 to every element of vector </span><span style=' font-weight: bold;'>a</span></div><div  class = 'S0'><span>Let's try something else:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">d</span><span> = a^2 </span><span style="color: rgb(60, 118, 61);">% this will raise an error.</span></span></div></div></div><div  class = 'S7'><span>This will print an error because </span><span style=' font-weight: bold;'>a </span><span>is not square and we want to do element-wise operation. So:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">d</span><span> = a.^2 </span><span style="color: rgb(60, 118, 61);">% will perform the element-wise power operation</span></span></div></div></div><div  class = 'S7'><span style=' font-weight: bold;'>Let's try to multiply vectors:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span>b = [1 3 5]</span></span></div></div><div class="inlineWrapper"><div  class = 'S14'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">c</span><span> = a * b</span></span></div></div></div><div  class = 'S7'><span>Again, we will get an error. This is because in matrix multiplication and linear algebra the number of columns in the 1st matrix need to match the number of rows in the 2nd matrix, thus we can try:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span>a2 = a' </span><span style="color: rgb(60, 118, 61);">% transpose a </span></span></div></div><div class="inlineWrapper"><div  class = 'S14'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">c</span><span> = a2 * b</span></span></div></div></div><div  class = 'S7'><span>but what if we want to just do element-wise multiplication of </span><span style=' font-weight: bold;'>a </span><span>and </span><span style=' font-weight: bold;'>b</span><span>?</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">c</span><span> = a.*b </span></span></div></div></div><div  class = 'S7'><span>this will multiply every elemnt of a with the corresponding elements of b, so:</span></div><div  class = 'S0'><span style=' font-family: monospace;'>c = [2 12 30]</span></div><div  class = 'S0'><span></span></div><div  class = 'S0'><span style=' font-weight: bold;'>String characters</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span>a = </span><span style="color: rgb(160, 32, 240);">'hello'</span></span></div></div><div class="inlineWrapper"><div  class = 'S11'><span style="white-space: pre;"><span>size(a)</span></span></div></div><div class="inlineWrapper"><div  class = 'S11'></div></div><div class="inlineWrapper"><div  class = 'S11'><span style="white-space: pre;"><span>a2 = </span><span style="color: rgb(160, 32, 240);">'hello there'</span></span></div></div><div class="inlineWrapper"><div  class = 'S11'><span style="white-space: pre;"><span>size(a2)</span></span></div></div><div class="inlineWrapper"><div  class = 'S11'></div></div><div class="inlineWrapper"><div  class = 'S11'><span style="white-space: pre;"><span>a3 = [</span><span style="color: rgb(160, 32, 240);">'hello'</span><span>; </span><span style="color: rgb(160, 32, 240);">'there'</span><span>]</span></span></div></div><div class="inlineWrapper"><div  class = 'S14'><span style="white-space: pre;"><span>size(a3)</span></span></div></div></div><div  class = 'S7'><span>Do you see the difference?</span></div><div  class = 'S0'><span style=' font-weight: bold;'>a</span><span> has one row and 5 columns, </span><span style=' font-weight: bold;'>a2</span><span> has one row and 11 columns (including the space between the words), and </span><span style=' font-weight: bold;'>a3</span><span> is an array of 2 rows and 5 columns.</span></div><div  class = 'S0'><span>Let's try somethings else:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">a4</span><span> = [</span><span style="color: rgb(160, 32, 240);">'hello'</span><span>; </span><span style="color: rgb(160, 32, 240);">'there'</span><span>; </span><span style="color: rgb(160, 32, 240);">'you'</span><span>] </span><span style="color: rgb(60, 118, 61);">% try to run this</span></span></div></div></div><div  class = 'S7'><span>we get an error because the number of columns are inconsistent. So we can try:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">a4</span><span> = [</span><span style="color: rgb(160, 32, 240);">'hello'</span><span>; </span><span style="color: rgb(160, 32, 240);">'there'</span><span>; </span><span style="color: rgb(160, 32, 240);">'you  '</span><span>] </span><span style="color: rgb(60, 118, 61);">% add two spaces after 'you'</span></span></div></div></div><div  class = 'S7'><span>or try:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>a4 = </span><span class="warning_squiggle_rte99189039">strvcat</span><span>(</span><span style="color: rgb(160, 32, 240);">'hello'</span><span>, </span><span style="color: rgb(160, 32, 240);">'there'</span><span>, </span><span style="color: rgb(160, 32, 240);">'you'</span><span>) </span><span style="color: rgb(60, 118, 61);">% will do the same</span></span></div></div></div><div  class = 'S7'><span>try it with a cell array:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>b = {</span><span style="color: rgb(160, 32, 240);">'hello'</span><span>, </span><span style="color: rgb(160, 32, 240);">'there'</span><span>, </span><span style="color: rgb(160, 32, 240);">'you'</span><span>}</span></span></div></div></div><div  class = 'S7'><span>Now try to extract the 2nd element of the cell:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>b{2} </span><span style="color: rgb(60, 118, 61);">% to extract elemnts from cells, we use brace brackets </span></span></div></div></div><div  class = 'S7'><span>or try to extract a specific letter:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>b{2}(4) </span><span style="color: rgb(60, 118, 61);">% from the 2nd word in the cell, extract the 4th letter</span></span></div></div></div><div  class = 'S7'><span style=' font-weight: bold;'>The functions disp, sprintf, fprintf. </span><span>sprintf and fprint use the same formatted output conventions as in the C programming language. For more info, see help.</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">a</span><span> = sprintf(</span><span style="color: rgb(160, 32, 240);">'Hello %s. I like photography. I have %d cameras.'</span><span>, </span><span style="color: rgb(160, 32, 240);">'guys'</span><span>, 2)</span></span></div></div></div><div  class = 'S7'><span></span></div><div  class = 'S0'><span style=' font-weight: bold;'>Built-in functions</span></div><div  class = 'S0'><span>There are </span><span style=' font-weight: bold;'>a lot of</span><span> built-in functions in matlab. Some are: </span><span style=' font-weight: bold; font-style: italic;'>sin, cos, tan, acos, atan, exp, log, log10, sqrt</span><span>.....</span></div><div  class = 'S0'><span>try these:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span>x = 0:.1:10*pi</span></span></div></div><div class="inlineWrapper"><div  class = 'S11'><span style="white-space: pre;"><span>plot(x, sin(x)) </span><span style="color: rgb(60, 118, 61);">% plot the above</span></span></div></div><div class="inlineWrapper"><div  class = 'S11'><span style="white-space: pre;"><span>plot(x, cos(x))</span></span></div></div><div class="inlineWrapper"><div  class = 'S11'><span style="white-space: pre;"><span>plot(x, tan(x))</span></span></div></div><div class="inlineWrapper"><div  class = 'S14'><span style="white-space: pre;"><span>plot(x, exp(x))</span></span></div></div></div><div  class = 'S7'><span>It is very easy to use them. </span></div><div  class = 'S0'><span>Let's see the built-in functions:</span><span style=' font-weight: bold; font-style: italic;'> round, fix, ceil, rem, sign</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span>plot(x, round(2*sin(x)))</span></span></div></div><div class="inlineWrapper"><div  class = 'S14'><span style="white-space: pre;"><span>plot(x, sign(2*sin(x)))</span></span></div></div></div><div  class = 'S7'><span>If we want to get random integerers from 1 to n, we can use</span><span style=' font-weight: bold; font-style: italic;'> floor:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>floor(8*rand(1,10)) + 1 </span><span style="color: rgb(60, 118, 61);">% get 10 random integers from 1 to 8</span></span></div></div></div><div  class = 'S7'><span>we can also </span><span style=' font-weight: bold;'>shuffle</span><span> the arrangement of an array using </span><span style=' font-weight: bold;'>randperm</span><span>:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span>a = 1:2:22</span></span></div></div><div class="inlineWrapper"><div  class = 'S11'><span style="white-space: pre;"><span>b = randperm(11) </span><span style="color: rgb(60, 118, 61);">% because we have 11 elements in a</span></span></div></div><div class="inlineWrapper"><div  class = 'S14'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">c</span><span> = a(b)</span></span></div></div></div><div  class = 'S7'><span>now </span><span style=' font-weight: bold;'>a </span><span>has the shuffled arrangement of </span><span style=' font-weight: bold;'>b</span><span>. We could also right it as:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>c = a(randperm(length(a))) </span><span style="color: rgb(60, 118, 61);">% also shuffles the arrangement of a </span></span></div></div></div><div  class = 'S7'><span></span></div><div  class = 'S0'><span style=' font-weight: bold;'>Complex numbers. </span></div><div  class = 'S0'><span>In matlab, complex numbers can be enterted like this:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">a</span><span> = </span><span>1+1i</span></span></div></div></div><div  class = 'S7'><span>which is tha same as:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">a</span><span> = 1+sqrt(-1)</span></span></div></div></div><div  class = 'S7'><span>The variables </span><span style=' font-weight: bold;'>i </span><span>and </span><span style=' font-weight: bold;'>j </span><span>are automatically set up to equal</span><span style=' font-family: monospace;'> sqrt(-1)</span><span>. But given that these variables are often used as indicies in </span><span style=' font-weight: bold;'>for</span><span> loops, it's better to use </span><span style=' font-family: monospace;'>1i </span><span>instead.</span></div><div  class = 'S0'><span>We can also use the </span><span style=' font-weight: bold;'>complex</span><span> built-in function:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">a</span><span> = complex(1, -4)</span></span></div></div></div><div  class = 'S7'><span>There are several functions for complex numbers in matlab:</span><span style=' font-weight: bold; font-style: italic;'> angle, abs, conj, real, imag</span><span>. </span></div><div  class = 'S0'><span style=' font-weight: bold;'>NOTE:</span><span> be careful with transpose. </span><span style=' font-weight: bold;'>a' </span><span>is in fact the complex conjugate transpose (the same as a normal transpose for real numbers). </span></div><div  class = 'S0'><span>Take a look at this example:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span>a = 1i*[1; 2; 3]</span></span></div></div><div class="inlineWrapper"><div  class = 'S11'><span style="white-space: pre;"><span>a'</span></span></div></div><div class="inlineWrapper"><div  class = 'S14'><span style="white-space: pre;"><span>a.'</span></span></div></div></div><div  class = 'S7'><span></span></div><div  class = 'S0'><span style=' font-weight: bold;'>Logical operators.</span><span>  Most of matlab variables are numeric. But, there is the spacial logical type, which can have one of two values: </span><span style=' font-family: monospace;'>true (1) </span><span>and </span><span style=' font-family: monospace;'>false (0).</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span class="warning_squiggle_rte99189039">b</span><span> = [true false false true true false]</span></span></div></div></div><div  class = 'S7'><span>this is the same as:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>b = logical([1 0 0 1 1 0])</span></span></div></div></div><div  class = 'S7'><span>In fact, true and false are functions, simillar to the functions ones and zeros:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>true(2,4)</span></span></div></div></div><div  class = 'S7'><span>this can be also written as:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>ones(2,4)</span></span></div></div></div><div  class = 'S7'><span>we can use the logical variables  as  a mask to perform </span><span style=' font-weight: bold;'>logical indexing</span><span>:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span>d = 5:-1:1</span></span></div></div><div class="inlineWrapper"><div  class = 'S14'><span style="white-space: pre;"><span>d(b)</span></span></div></div></div><div  class = 'S7'><span>In this case, the logical variable that acts as a mask must be of the same size as the variable it is indexing. The values indexed as</span><span style=' font-family: monospace;'> true a</span><span>re returned. This is useful when using logical expressions. </span></div><div  class = 'S0'><span style=' font-weight: bold;'>Logical expressions. </span></div><div  class = 'S0'><span style=' text-decoration: underline;'>Relational operators.</span><span> For more information type:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>help </span><span style="color: rgb(160, 32, 240);">relop</span></span></div></div></div><div  class = 'S7'><span>The logical expressions are:</span><span style=' font-family: monospace;'> &lt; &lt;=  &gt; &gt;= == ~=.</span><span> Logical expressions are often used in if statements. When using an expression like </span><span style=' font-family: monospace;'>a &lt;= b</span><span>, b must be the same size as a.</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span>a = 1:5</span></span></div></div><div class="inlineWrapper"><div  class = 'S11'><span style="white-space: pre;"><span>a &gt; 3</span></span></div></div><div class="inlineWrapper"><div  class = 'S11'><span style="white-space: pre;"><span>b = ones(1,5)*2</span></span></div></div><div class="inlineWrapper"><div  class = 'S14'><span style="white-space: pre;"><span>a &gt; b</span></span></div></div></div><div  class = 'S7'><span style=' text-decoration: underline;'>Logical operators </span></div><div  class = 'S0'><span>Negation </span><span style=' font-weight: bold;'>~ </span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span>a = [1 0 1]</span></span></div></div><div class="inlineWrapper"><div  class = 'S14'><span style="white-space: pre;"><span>~a</span></span></div></div></div><div  class = 'S7'><span style=' text-decoration: underline;'>Logical comparisons </span></div><div  class = 'S0'><span style=' font-weight: bold;'>&amp; | xor</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span>a = [1 0 1]</span></span></div></div><div class="inlineWrapper"><div  class = 'S11'><span style="white-space: pre;"><span>b = [0 0 1]</span></span></div></div><div class="inlineWrapper"><div  class = 'S11'><span style="white-space: pre;"><span>a&amp;b</span></span></div></div><div class="inlineWrapper"><div  class = 'S14'><span style="white-space: pre;"><span>a|b</span></span></div></div></div><div  class = 'S7'><span>Logical indexing is very useful with logical expressions:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span>a = 1:10</span></span></div></div><div class="inlineWrapper"><div  class = 'S11'><span style="white-space: pre;"><span>b = -5:4</span></span></div></div><div class="inlineWrapper"><div  class = 'S11'><span style="white-space: pre;"><span>a(b&gt;1)</span></span></div></div><div class="inlineWrapper"><div  class = 'S14'><span style="white-space: pre;"><span>a(b&gt;-1 &amp; a&lt;8)</span></span></div></div></div><div  class = 'S7'><span>Some useful logical functions are: </span><span style=' font-weight: bold; font-style: italic;'>any, all, find. </span></div><div  class = 'S0'><span>The value returned by</span><span style=' font-family: monospace;'> any(a)</span><span> is true if any of the elements of a are true, and false otherwise. </span><span style=' font-family: monospace;'>all(a)</span><span> is true only if all the elements of a are true. </span><span style=' font-family: monospace;'>Find</span><span> returns the indicies of the true elements of a:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span>a = [1 0 1 0 0 1]</span></span></div></div><div class="inlineWrapper"><div  class = 'S14'><span style="white-space: pre;"><span>find(a) </span><span style="color: rgb(60, 118, 61);">% this should return the indicies 1,3 and 6.</span></span></div></div></div><div  class = 'S7'><span>This is very useful in expressions such as:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span>a</span><span> = 1:10</span></span></div></div><div class="inlineWrapper"><div  class = 'S11'><span style="white-space: pre;"><span>b = find(a&gt;5)</span></span></div></div><div class="inlineWrapper"><div  class = 'S14'><span style="white-space: pre;"><span>a(b(1:3))</span></span></div></div></div><div  class = 'S7'><span></span></div><div  class = 'S0'><span></span></div><div  class = 'S0'><span></span></div><div  class = 'S0'><span></span></div><div  class = 'S0'></div></div>
 <br>
 <!-- 
 ##### SOURCE BEGIN #####
@@ -69,8 +236,10 @@
 % * Images in PTB
 % * Animation in PTB
 %% 
-% This is the 1st of the 5 notebooks. Please note that I will be updating them 
-% at times.
+% This is the 1st of the 5 notebooks. I will first provide a few matlab notes 
+% that I think are important before diving into the powerfull *psychtoolbox.*
+% 
+% Please note that I will be updating them at times.
 % 
 % % REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH 
 % %
@@ -125,8 +294,381 @@ size(a)
 
 help size
 %% 
+% Try this:
+
+[nrows, ncols] = size(a)
+%% 
+% It will output the number of rows (nrows) and the number of columns (ncols).
+% 
+% Back to variables. Variables can also have three or more dimensions. We saw 
+% that a scalar is a 1x1 matrix. Other functions that are size related are: |ndims| 
+% and |length| functions. 
+% 
+% Initialize a variable using the |ones| or |zeros| function and ask for its 
+% length and ndims:
+
+a = zeros(3,4)
+length(a)
+ndims(a)
+%% 
+% *Special characters and operations.* for more info type:
+
+help ops 
+%% 
+% When programming it is strongly recommended to use comments. In case you don't 
+% know this yet, in matlab we add comments using the percent (%)  sign:
+
+% this is a comment
+%% 
+% Comments are extremely useful for us and for others. Try writing a block of 
+% code without comments, and don't look at it for a few months. I bet you that 
+% a few months later, when you see your own code, you will probably be thinking 
+% "what was I trying to do here?"
+% 
+% Now let's try some addition.
+
+% create 2 variable/matricies and add them in a third 
+% variable/matrix
+a = [1 2]
+b = [3 4]
+c = a + b
+%% 
+% As you can see we added the rows with the rows and the columns with the columns. 
+% The same logic appllies for subtraction but not for multiplication or division 
+% (I will probably make a seperate notebook on matrix operartions). For now, keep 
+% in mind that when adding 2 matricies, we add the rows with the rows and the 
+% columns with the columns. 
 % 
 % 
+% 
+% _*Also, keep in mind that it's good to use semicolon (;) at the end of your 
+% commands. For example*_:
+
+c = a + b; 
+%% 
+% This prevents matlab from printing the output. Even though now, it may not 
+% seem necessary, it can be really annoying in the future when running long scripts 
+% with for and while loops, etc.. besides (especially when working in loops), 
+% not using semicolons results in your code running slowly. 
+% 
+% *The colon (:).* This is used as "to" or "step":
+
+b = 1:5 % create a 1 to 5 vector
+c = 1:.5:4 % create a 1 to 4 vector and increment by 0.5 each time
+%% 
+% 
+% 
+% *Indexing (subscripts).* We use parentheses to indicate subscripts. Subscritps 
+% need to be positive integers, in matricies of any size:
+
+b(2) % which is the 2nd elemt of b?
+b(1:3) % which are the first 3 elements of b?
+%% 
+% The second command |b(1:3)| is the same as:
+
+b([1 2 3])
+%% 
+% Variable/matrix b is of size 1x5. Lets try indexing with matricies of different 
+% size:
+
+a = [1 3 5 6; 4 6 3 2; 5 8 9 5] % this is a 3x4 matrix
+%% 
+% Exactract the entire 2nd row:
+
+a(2,:) % the colon is used as: everything 
+% (so, 2nd row and all columns)
+%% 
+% Now, extract the element in row 3, column 4:
+
+a(3,4) % the output is 5
+%% 
+% try this:
+
+a([1 3], :) % we explicitely ask for rows 1 and 3 and all columns
+a([1 2], [2 4]) % extract rows 1 and 2 and columns 2 and 4
+%% 
+% what if we want to change the value of a specific element/item in a matrix? 
+% Let's say we want to change the value of the item in row 3, column 3 (the value 
+% now is 9) to 0:
+
+a(3,3)= 0 % now 9 has changed to 0
+%% 
+% 
+% 
+% *Some basic math stuff.* For more info type:
+
+help arith
+%% 
+% The operations are: |+ - * / ^ .* ./ .^|
+% 
+% Scalar math. Simple operations of scalars:
+
+2*3 
+%% 
+% or...
+
+a = 2
+b = 3
+c = a*b
+%% 
+% The above two codes are exactly the same.
+% 
+% Now try some more operations:
+
+4 ^ 1.5
+2 * 3 + 2
+2 * (3 + 1)
+%% 
+% NOTE: you can try the above operations in variables:
+
+a = 4
+b = 1.5
+c = a ^ b
+%% 
+% .. and so on.
+% 
+% *Basic Vector and Scalar math.* 
+% 
+% Create a 1x3 vector:
+
+a = [2 4 6]
+b = 2*a
+%% 
+% *b* multiplies every element of vector *a* by 2. Thus |b = [4 8 12]|
+
+c = a + 5 
+%% 
+% *c* adds 5 to every element of vector *a*
+% 
+% Let's try something else:
+
+d = a^2 % this will raise an error.
+%% 
+% This will print an error because *a* is not square and we want to do element-wise 
+% operation. So:
+
+d = a.^2 % will perform the element-wise power operation
+%% 
+% *Let's try to multiply vectors:*
+
+b = [1 3 5]
+c = a * b
+%% 
+% Again, we will get an error. This is because in matrix multiplication and 
+% linear algebra the number of columns in the 1st matrix need to match the number 
+% of rows in the 2nd matrix, thus we can try:
+
+a2 = a' % transpose a 
+c = a2 * b
+%% 
+% but what if we want to just do element-wise multiplication of *a* and *b*?
+
+c = a.*b 
+%% 
+% this will multiply every elemnt of a with the corresponding elements of b, 
+% so:
+% 
+% |c = [2 12 30]|
+% 
+% 
+% 
+% *String characters*
+
+a = 'hello'
+size(a)
+
+a2 = 'hello there'
+size(a2)
+
+a3 = ['hello'; 'there']
+size(a3)
+%% 
+% Do you see the difference?
+% 
+% *a* has one row and 5 columns, *a2* has one row and 11 columns (including 
+% the space between the words), and *a3* is an array of 2 rows and 5 columns.
+% 
+% Let's try somethings else:
+
+a4 = ['hello'; 'there'; 'you'] % try to run this
+%% 
+% we get an error because the number of columns are inconsistent. So we can 
+% try:
+
+a4 = ['hello'; 'there'; 'you  '] % add two spaces after 'you'
+%% 
+% or try:
+
+a4 = strvcat('hello', 'there', 'you') % will do the same
+%% 
+% try it with a cell array:
+
+b = {'hello', 'there', 'you'}
+%% 
+% Now try to extract the 2nd element of the cell:
+
+b{2} % to extract elemnts from cells, we use brace brackets 
+%% 
+% or try to extract a specific letter:
+
+b{2}(4) % from the 2nd word in the cell, extract the 4th letter
+%% 
+% *The functions disp, sprintf, fprintf.* sprintf and fprint use the same formatted 
+% output conventions as in the C programming language. For more info, see help.
+
+a = sprintf('Hello %s. I like photography. I have %d cameras.', 'guys', 2)
+%% 
+% 
+% 
+% *Built-in functions*
+% 
+% There are *a lot of* built-in functions in matlab. Some are: _*sin, cos, tan, 
+% acos, atan, exp, log, log10, sqrt*_.....
+% 
+% try these:
+
+x = 0:.1:10*pi
+plot(x, sin(x)) % plot the above
+plot(x, cos(x))
+plot(x, tan(x))
+plot(x, exp(x))
+%% 
+% It is very easy to use them. 
+% 
+% Let's see the built-in functions: _*round, fix, ceil, rem, sign*_
+
+plot(x, round(2*sin(x)))
+plot(x, sign(2*sin(x)))
+%% 
+% If we want to get random integerers from 1 to n, we can use _*floor:*_
+
+floor(8*rand(1,10)) + 1 % get 10 random integers from 1 to 8
+%% 
+% we can also *shuffle* the arrangement of an array using *randperm*:
+
+a = 1:2:22
+b = randperm(11) % because we have 11 elements in a
+c = a(b)
+%% 
+% now *a* has the shuffled arrangement of *b*. We could also right it as:
+
+c = a(randperm(length(a))) % also shuffles the arrangement of a 
+%% 
+% 
+% 
+% *Complex numbers.* 
+% 
+% In matlab, complex numbers can be enterted like this:
+
+a = 1+1i
+%% 
+% which is tha same as:
+
+a = 1+sqrt(-1)
+%% 
+% The variables *i* and *j* are automatically set up to equal |sqrt(-1)|. But 
+% given that these variables are often used as indicies in *for* loops, it's better 
+% to use |1i| instead.
+% 
+% We can also use the *complex* built-in function:
+
+a = complex(1, -4)
+%% 
+% There are several functions for complex numbers in matlab: _*angle, abs, conj, 
+% real, imag*_. 
+% 
+% *NOTE:* be careful with transpose. *a'* is in fact the complex conjugate transpose 
+% (the same as a normal transpose for real numbers). 
+% 
+% Take a look at this example:
+
+a = 1i*[1; 2; 3]
+a'
+a.'
+%% 
+% 
+% 
+% *Logical operators.*  Most of matlab variables are numeric. But, there is 
+% the spacial logical type, which can have one of two values: |true (1)| and |false 
+% (0).|
+
+b = [true false false true true false]
+%% 
+% this is the same as:
+
+b = logical([1 0 0 1 1 0])
+%% 
+% In fact, true and false are functions, simillar to the functions ones and 
+% zeros:
+
+true(2,4)
+%% 
+% this can be also written as:
+
+ones(2,4)
+%% 
+% we can use the logical variables  as  a mask to perform *logical indexing*:
+
+d = 5:-1:1
+d(b)
+%% 
+% In this case, the logical variable that acts as a mask must be of the same 
+% size as the variable it is indexing. The values indexed as |true a|re returned. 
+% This is useful when using logical expressions. 
+% 
+% *Logical expressions.* 
+% 
+% Relational operators. For more information type:
+
+help relop
+%% 
+% The logical expressions are: |< <=  > >= == ~=.| Logical expressions are often 
+% used in if statements. When using an expression like |a <= b|, b must be the 
+% same size as a.
+
+a = 1:5
+a > 3
+b = ones(1,5)*2
+a > b
+%% 
+% Logical operators 
+% 
+% Negation *~* 
+
+a = [1 0 1]
+~a
+%% 
+% Logical comparisons 
+% 
+% *& | xor*
+
+a = [1 0 1]
+b = [0 0 1]
+a&b
+a|b
+%% 
+% Logical indexing is very useful with logical expressions:
+
+a = 1:10
+b = -5:4
+a(b>1)
+a(b>-1 & a<8)
+%% 
+% Some useful logical functions are: _*any, all, find.*_ 
+% 
+% The value returned by |any(a)| is true if any of the elements of a are true, 
+% and false otherwise. |all(a)| is true only if all the elements of a are true. 
+% |Find| returns the indicies of the true elements of a:
+
+a = [1 0 1 0 0 1]
+find(a) % this should return the indicies 1,3 and 6.
+%% 
+% This is very useful in expressions such as:
+
+a = 1:10
+b = find(a>5)
+a(b(1:3))
+%% 
 % 
 % 
 % 
