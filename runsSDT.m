@@ -33,14 +33,14 @@ if size(pHit,2) == 1
     % calculate z scores 
     zHit    = -sqrt(2) * erfcinv(2 * pHit); % z score for hits
     zFA     = -sqrt(2) * erfcinv(2 * pFA);  % z score for false alarms
-    b       = exp(zHit^2 - zFA^2/2);        % calculate subject's bias (β craterion)
+    b       = exp(zHit^2 - zFA^2/2);        % calculate subject's bias (β criterion)
     
 else
     
     % convert to z scores
     zHit    = -sqrt(2).* erfcinv(2 * pHit); % z score for hits
     zFA     = -sqrt(2).* erfcinv(2 * pFA);  % z score for false alarms
-    b       = exp(zHit.^2 - zFA.^2/2);      % calculate subject's bias (β craterion)
+    b       = exp(zHit.^2 - zFA.^2/2);      % calculate subject's bias (β criterion)
     
 end
 
