@@ -23,7 +23,7 @@ function s = RandUnequalConditions(v,n,a)
 % s = RandUnequalConditions(trialvector,batchsize,cond2)
 
 % trialvec = (70,1) vector
-% batchsize = 8
+% batchsize = 10
 % cond2 = 2
 
 % the function rundomizes trialvec and it splits it in 10 batches of 7
@@ -74,7 +74,7 @@ s = v(randomize);
 
 toc
 
-fprintf('needed %d attempts to find valid sequence\n', count);
+fprintf('needed %d attempts to find an optimal randomization for vector v\n', count);
 
 
 end
