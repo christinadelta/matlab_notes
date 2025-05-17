@@ -16,6 +16,13 @@ function H = simple_shaded_error_bars(x, y, errBar, lineProps, transparent, plot
 % Outputs:
 %   H - structure with handles to mainLine, patch, and edge lines
 
+% Example code to call the function:
+%
+% x = 1:10;
+% y = sin(x);
+% err = 0.1 * ones(size(x));
+% simple_shaded_error_bars(x, y, err, '-b', true);
+
 %% 
 
 % Default values
